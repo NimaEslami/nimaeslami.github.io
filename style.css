@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background: white;
@@ -15,7 +19,7 @@ body {
 /* Main two-column layout */
 .page {
     display: grid;
-    grid-template-columns: 135px minmax(0, 1fr);
+    grid-template-columns: 150px minmax(0, 1fr);
     min-height: 100vh;
 }
 
@@ -36,7 +40,7 @@ body {
     margin-bottom: 8px;
     color: #496ca7;
     font-size: 20px;
-    line-height: 1.05;
+    line-height: 1.1;
     text-decoration: none;
 }
 
@@ -52,20 +56,22 @@ body {
 
 /* Main content */
 .content {
-    padding: 14px 28px 40px 20px;
+    width: 100%;
     max-width: 1500px;
+    padding: 14px 28px 40px 20px;
 }
 
 h1 {
     color: #23365d;
     font-size: 34px;
-    line-height: 1;
+    line-height: 1.1;
     margin: 0;
 }
 
 .subtitle {
     font-size: 20px;
-    margin: 2px 0 5px;
+    line-height: 1.35;
+    margin: 4px 0 8px;
 }
 
 .header-line {
@@ -86,6 +92,7 @@ h2 {
 h3 {
     color: #23365d;
     font-size: 21px;
+    margin-top: 18px;
     margin-bottom: 5px;
 }
 
@@ -111,6 +118,7 @@ a:hover {
 }
 
 .profile-photo {
+    display: block;
     width: 180px;
     height: auto;
     border: 1px solid #cccccc;
@@ -133,7 +141,7 @@ a:hover {
     white-space: nowrap;
 }
 
-/* Research and teaching entries */
+/* Research, education, and teaching entries */
 .entry {
     margin-bottom: 24px;
 }
@@ -142,6 +150,39 @@ a:hover {
     margin-top: 0;
 }
 
+/* Lists inside page entries */
+.entry ul {
+    margin: 8px 0 18px;
+    padding-left: 26px;
+}
+
+.entry li {
+    margin-bottom: 10px;
+}
+
+.entry li a {
+    font-size: 19px;
+    text-decoration: none;
+}
+
+.entry li a:hover {
+    text-decoration: underline;
+}
+
+/* Back link used on education subpages */
+.back-link {
+    margin-bottom: 24px;
+}
+
+.back-link a {
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Contact information */
 .contact {
     margin-top: 24px;
 }
@@ -187,5 +228,17 @@ a:hover {
 
     h1 {
         font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 18px;
     }
 }
